@@ -62,18 +62,25 @@ public func decrypt(shaHash: String) -> String? {
 
 ```swift
 import XCTest
-import CrackStation
+import Crackstation
 
-final class CrackStationTests: XCTestCase {
-    func testCrackStation() async {
+final class CKTests: XCTestCase {
     
+    
+    
+    func testing_Crackaa() async {
+        
         let crackStation = CrackStation()
         
-        plainText = crackStation.decrypt(shaHash: "cbf2a7ed1893d2686ae9ec75712d340c8b9f50e7bcd7698ee43ea2e3b42e3911")
-        XCTAssertEqual(plainText, "ab!")
+        
+        
+        let plainText = crackStation.decrypt(shaHash: "4594609b79e4760fe756dc2b83f0bf380a3f594f")
+        XCTAssertEqual(plainText, "zds")
+        
         
     }
 }
+
 ```
 
 # Author
