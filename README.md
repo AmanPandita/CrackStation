@@ -66,21 +66,13 @@ import Crackstation
 
 final class CKTests: XCTestCase {
     
-    
-    
     func testing_Crackaa() async {
         
         let crackStation = CrackStation()
-        
-        
-        
         let plainText = crackStation.decrypt(shaHash: "4594609b79e4760fe756dc2b83f0bf380a3f594f")
         XCTAssertEqual(plainText, "zds")
-        
-        
     }
 }
-
 ```
 
 # Author
