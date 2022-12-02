@@ -1,33 +1,14 @@
 import Foundation
-import CryptoKit
-
 public class CrackStation: Decrypter {
     
     private let hashDict:[String:String]
-    
+        
     public required init() {
-        self.hashDict = [:]
-        if let path = Bundle.module.url(forResource: "data", withExtension: "json") {
-            do {
-                let data = try Data(contentsOf: path)
-                let jsonResult = try JSONSerialization.jsonObject(with: data)
-                if let jsonResult = jsonResult as? [String:String] {
-                    self.hashDict = jsonResult
-                }
-            } catch {
-                self.hashDict = [:]
-            }
-        }
+        self.hashDict = try! JSONSerialization.jsonObject(with: Data(contentsOf: Bundle.module.url(forResource: "data", withExtension: "json")!)) as? [String:String] ?? [:]
     }
     
     public func decrypt(shaHash: String) -> String? {
-        if(hashDict[shaHash] != nil) {
-            return hashDict[shaHash]
-        }
-        else {
-            return nil
-        }
-        
+        return hashDict[shaHash]
     }
 }
 
