@@ -3,7 +3,7 @@ import CryptoKit
 
 public class CrackStation: Decrypter {
     
-    private var hashDict:[String:String]
+    private let hashDict:[String:String]
     
     public required init() {
         self.hashDict = [:]
@@ -30,3 +30,6 @@ public class CrackStation: Decrypter {
         
     }
 }
+
+
+
