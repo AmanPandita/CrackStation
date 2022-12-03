@@ -1,10 +1,10 @@
 # Crackstation, A Decrypter Implementation
 
 
-This library works on the principle of cracking unsalted hashes that are up to three charecters in length and matches the regular expression `[A-Za-z0-9?!]{1,3}`. Moreover, it can also manage cracking the SHA-1 and SHA-256 encrypted passwords.
+Password braches are becoming very repetetive in the recent days and it is important to demonsatrate how insecure the storage of unsalted hases are. Password safety is something everyone should be aware of so, this would also encourage healthy password practices.
 
 ## Overview
-Password braches are becoming very repetetive in the recent days and it is important to demonsatrate how insecure the storage of unsalted hases are. Password safety is something everyone should be aware of so, this would also encourage healthy password practices.
+This library works on the principle of cracking unsalted hashes that are up to three charecters in length and matches the regular expression `[A-Za-z0-9?!]{1,3}`. Moreover, it can also manage cracking the SHA-1 and SHA-256 encrypted passwords.
 
 ## Mission Statement
 
